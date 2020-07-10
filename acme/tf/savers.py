@@ -112,7 +112,7 @@ class Checkpointer:
     objects_to_save = {k: to_ckptable(v) for k, v in objects_to_save.items()}
 
     self._time_delta_minutes = time_delta_minutes
-    self._last_saved = 0.
+    self._last_saved = time.time()
     self._enable_checkpointing = enable_checkpointing
     self._checkpoint_manager = None
 
